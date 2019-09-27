@@ -4,14 +4,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <title>Document</title>
+    <title>家庭信息管理系统</title>
     <script type="text/javascript" src="static/js/jquery-1.9.0.min.js"></script>
     <script type="text/javascript" src="static/js/login.js"></script>
     <link href="static/css/login2.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <h1>
-    生鲜管理系统<sup>V2017</sup>
+    家庭信息管理系统<sup>V2019</sup>
 </h1>
 
 <div class="login" style="margin-top: 50px;">

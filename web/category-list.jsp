@@ -15,7 +15,7 @@
 <body>
 <div class="jumbotron">
 	<div class="container">
-  		<h3>——生鲜管理系统</h3>
+  		<h3>——家庭信息管理系统</h3>
   		
 	</div>
 </div>
@@ -25,8 +25,8 @@
 			<!-- 左侧内容 -->
 			<div class="col-md-3">
 				<div class="list-group">
-					<a href="${pageContext.request.contextPath}/category-list.jsp" class="list-group-item text-center active">生鲜列表</a>
-					<a href="${pageContext.request.contextPath}/category-add.jsp" class="list-group-item text-center ">新增生鲜</a>
+					<a href="${pageContext.request.contextPath}/category-list.jsp" class="list-group-item text-center active">成员列表</a>
+					<a href="${pageContext.request.contextPath}/category-add.jsp" class="list-group-item text-center ">新增成员</a>
 				</div>
 			</div>
 			<!-- 右侧内容 -->
@@ -43,16 +43,16 @@
 				</div>
 				<!-- 自定义内容 -->
 				<div class="panel panel-default">
-					<div class="panel-heading">生鲜列表</div>
+					<div class="panel-heading">家庭成员列表</div>
 					<div class="panel-body">
 						<table class="table table-striped table-responsive table-hover">
 							<thead>
 								<tr>
 									<th>编号</th>
-									<th>名称</th>
+									<th>姓名</th>
 									<th>添加时间</th>
 									<th>类别</th>
-									<th>产地</th>
+									<th>性别</th>
 									<th width="120">操作</th>
 								</tr>
 							</thead>
@@ -63,13 +63,13 @@
 									<td>${category.c_name}</td>
 									<td>${category.createtime}</td>
 									<c:if test="${category.type==0}" >
-										<td>未知</td>
+										<td>长辈</td>
 									</c:if>
 									<c:if test="${category.type==1}" >
-										<td>猪牛羊肉</td>
+										<td>平辈</td>
 									</c:if>
 									<c:if test="${category.type==2}" >
-										<td>海鲜水产</td>
+										<td>晚辈</td>
 									</c:if>
 									<td>${category.place}</td>
 
@@ -140,7 +140,7 @@
 <!-- 尾部 -->
 <div class="jumbotron" style=" margin-bottom:0;margin-top:105px;">
 	<div class="container">
-	<span>&copy; 2016 Saitmob</span>
+	<span>&copy; 2019 Yiqiang</span>
 	</div>
 </div>
 

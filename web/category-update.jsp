@@ -16,7 +16,7 @@
 <div class="jumbotron">
 	<div class="container">
 
-  		<h3>——生鲜管理系统</h3>
+  		<h3>——家庭信息管理系统</h3>
   		
 	</div>
 </div>
@@ -47,7 +47,7 @@
 				</div>
 				<!-- 自定义内容 -->
 				<div class="panel panel-default">
-					<div class="panel-heading">修改生鲜信息</div>
+					<div class="panel-heading">修改家庭成员信息</div>
 					<div class="panel-body">
 						<form action="category" method="post" class="form-horizontal" role="form">
 							<div class="form-group">

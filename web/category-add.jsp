@@ -19,7 +19,7 @@
 <div class="jumbotron">
     <div class="container">
 
-        <h3>——生鲜管理系统</h3>
+        <h3>——家庭信息管理系统</h3>
 
     </div>
 </div>
@@ -29,9 +29,9 @@
             <!-- 左侧内容 -->
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="${pageContext.request.contextPath}/category" class="list-group-item text-center ">生鲜列表</a>
+                    <a href="${pageContext.request.contextPath}/category" class="list-group-item text-center ">成员列表</a>
                     <a href="${pageContext.request.contextPath}/layout-form.html"
-                       class="list-group-item text-center active">新增生鲜</a>
+                       class="list-group-item text-center active">新增成员</a>
                 </div>
             </div>
             <!-- 右侧内容 -->
@@ -57,39 +57,39 @@
                 </div>
                 <!-- 自定义内容 -->
                 <div class="panel panel-default">
-                    <div class="panel-heading">新增生鲜种类</div>
+                    <div class="panel-heading">新增家庭成员</div>
                     <div class="panel-body">
                         <form action="category" method="post" class="form-horizontal" role="form">
                             <div class="form-group">
                                 <input type="hidden" name="method" value="addCategory">
                                 <label class="col-sm-2 control-label">名称</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="c_name" class="form-control" placeholder="生鲜名称">
+                                    <input type="text" name="c_name" class="form-control" placeholder="成员姓名">
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="form-control-static text-danger">名称不能为空</p>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">产地</label>
+                                <label class="col-sm-2 control-label">性别</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="place" class="form-control" placeholder="产地">
+                                    <input type="text" name="place" class="form-control" placeholder="成员性别">
                                 </div>
                                 <div class="col-sm-5">
-                                    <p class="form-control-static text-danger">产地不能为空</p>
+                                    <p class="form-control-static text-danger">性别不能为空</p>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">类别</label>
                                 <div class="col-sm-5">
                                     <label class="radio-inline">
-                                        <input type="radio" name="type" value="0">未知
+                                        <input type="radio" name="type" value="0">长辈
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="type" value="1">猪牛羊肉
+                                        <input type="radio" name="type" value="1">平辈
                                     </label>
                                     <label class="radio-inline">
-                                        <input type="radio" name="type" value="2">海鲜水产
+                                        <input type="radio" name="type" value="2">晚辈
                                     </label>
                                 </div>
                                 <div class="col-sm-5">
@@ -114,7 +114,7 @@
 <!-- 尾部 -->
 <div class="jumbotron" style=" margin-bottom:0;margin-top:105px;">
     <div class="container">
-        <span>&copy; 2016 Saitmob</span>
+        <span>&copy; 2019 Yiqiang</span>
     </div>
 </div>
 
