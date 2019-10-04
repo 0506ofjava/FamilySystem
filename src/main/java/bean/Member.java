@@ -3,11 +3,11 @@ package bean;
 /**
  * @author yq
  */
-public class FamilyMember {
+public class Member {
     private String name;
     private String sex;
     private int age;
-    private String relationship;
+    private String type;
     private int id;
 
     public String getName() {
@@ -34,12 +34,12 @@ public class FamilyMember {
         this.age = age;
     }
 
-    public String getRelationship() {
-        return relationship;
+    public String getType() {
+        return type;
     }
 
-    public void setRelationship(String relationship) {
-        this.relationship = relationship;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int getId() {

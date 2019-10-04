@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>index</title>
+	<title>家庭信息管理系统</title>
 	<link rel="stylesheet" href="static/css/bootstrap.min.css">   
 	<style type="text/css">
 		body{ font-family: 'Microsoft YaHei';}
@@ -25,8 +25,8 @@
 			<!-- 左侧内容 -->
 			<div class="col-md-3">
 				<div class="list-group">
-					<a href="${pageContext.request.contextPath}/category-list.jsp" class="list-group-item text-center active">成员列表</a>
-					<a href="${pageContext.request.contextPath}/category-add.jsp" class="list-group-item text-center ">新增成员</a>
+					<a href="${pageContext.request.contextPath}/member-list.jsp" class="list-group-item text-center active">成员列表</a>
+					<a href="${pageContext.request.contextPath}/member-add.jsp" class="list-group-item text-center ">新增成员</a>
 				</div>
 			</div>
 			<!-- 右侧内容 -->
@@ -50,34 +50,35 @@
 								<tr>
 									<th>编号</th>
 									<th>姓名</th>
-									<th>添加时间</th>
+									<th>年龄</th>
 									<th>类别</th>
 									<th>性别</th>
 									<th width="120">操作</th>
 								</tr>
 							</thead>
 							<tbody>
-							<c:forEach items="${page.list}" var="category">
+							<c:forEach items="${page.list}" var="member">
 								<tr>
-									<th>${category.c_id}</th>
-									<td>${category.c_name}</td>
-									<td>${category.createtime}</td>
-									<c:if test="${category.type==0}" >
+									<th>${member.id}</th>
+									<td>${member.name}</td>
+									<td>${member.age}</td>
+									<c:if test="${member.type==0}" >
 										<td>长辈</td>
 									</c:if>
-									<c:if test="${category.type==1}" >
+									<c:if test="${member.type==1}" >
 										<td>平辈</td>
 									</c:if>
-									<c:if test="${category.type==2}" >
+									<c:if test="${member.type==2}" >
 										<td>晚辈</td>
 									</c:if>
-									<td>${category.place}</td>
+									<td>${member.sex}</td>
 
 
 									<td>
 										<%--<a href="">详情</a>--%>
-										<a href="${pageContext.request.contextPath}/category?method=deleteCategory&c_id=${category.c_id}">删除</a>
-										<a href="${pageContext.request.contextPath}/category-update.jsp?c_id=${category.c_id}&c_name=${category.c_name}&type=${category.type}&place=${category.place}">修改</a>
+										<%-- pageContext.request.contextPath代表当前页面路径--%>
+										<a href="${pageContext.request.contextPath}/member?method=deleteMember&id=${member.id}">删除</a>
+										<a href="${pageContext.request.contextPath}/member-update.jsp?id=${member.id}&name=${member.name}&type=${member.type}&sex=${member.sex}">修改</a>
 									</td>
 								</tr>
 							</c:forEach>
@@ -112,7 +113,7 @@
 					<ul class="pagination pull-right">
 						<li  class="previous"><a href="#">&laquo;</a></li>
 						<c:forEach begin="1" end="${page.totalPage}" var="Page">
-							<li><a href="${pageContext.request.contextPath}/category?method=getCategoryList&currentPage=${Page}&currentCount=10">${Page}</a></li>
+							<li><a href="${pageContext.request.contextPath}/member?method=getMemberList&currentPage=${Page}&currentCount=10">${Page}</a></li>
 						</c:forEach>
 						<li><a href="#">&raquo;</a></li>
 					</ul>

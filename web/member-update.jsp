@@ -27,7 +27,7 @@
 			<div class="col-md-3">
 				<div class="list-group">
 					<a href="${pageContext.request.contextPath}/category" class="list-group-item text-center ">生鲜列表</a>
-					<a href="${pageContext.request.contextPath}/category-add.jsp" class="list-group-item text-center ">新增生鲜</a>
+					<a href="${pageContext.request.contextPath}/member-add.jsp" class="list-group-item text-center ">新增生鲜</a>
 					<a href="${pageContext.request.contextPath}/layout-update.jsp" class="list-group-item text-center active">修改生鲜</a>
 
 				</div>
