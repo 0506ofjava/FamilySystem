@@ -73,6 +73,7 @@
 									</c:if>
 									<td>${member.sex}</td>
 
+
 									<td>
 										<%--<a href="">详情</a>--%>
 										<%-- pageContext.request.contextPath代表当前页面路径--%>
@@ -112,12 +113,17 @@
 					<ul class="pagination pull-right">
 						<li  class="previous"><a href="#">&laquo;</a></li>
 						<c:forEach begin="1" end="${page.totalPage}" var="Page">
-							<li><a href="${pageContext.request.contextPath}/member?method=doGet&currentPage=${Page}&currentCount=10">${Page}</a></li>
+							<li><a href="${pageContext.request.contextPath}/member?method=getMemberList&currentPage=${Page}&currentCount=10">${Page}</a></li>
 						</c:forEach>
 						<li><a href="#">&raquo;</a></li>
 					</ul>
 
 				</nav>
+
+
+
+
+
 
 
 				<!-- 分页结束 -->
