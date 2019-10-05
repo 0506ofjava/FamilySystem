@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>form</title>
+    <title>增加成员信息</title>
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <style type="text/css">
         body {
@@ -29,8 +29,8 @@
             <!-- 左侧内容 -->
             <div class="col-md-3">
                 <div class="list-group">
-                    <a href="${pageContext.request.contextPath}/category" class="list-group-item text-center ">成员列表</a>
-                    <a href="${pageContext.request.contextPath}/layout-form.html"
+                    <a href="${pageContext.request.contextPath}/member?method=getMemberList&currentPage=1" class="list-group-item text-center ">成员列表</a>
+                    <a href="${pageContext.request.contextPath}/member-add.jsp"
                        class="list-group-item text-center active">新增成员</a>
                 </div>
             </div>
@@ -59,12 +59,12 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">新增家庭成员</div>
                     <div class="panel-body">
-                        <form action="category" method="post" class="form-horizontal" role="form">
+                        <form action="member" method="post" class="form-horizontal" role="form">
                             <div class="form-group">
-                                <input type="hidden" name="method" value="addCategory">
+                                <input type="hidden" name="method" value="addMember">
                                 <label class="col-sm-2 control-label">名称</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="c_name" class="form-control" placeholder="成员姓名">
+                                    <input type="text" name="name" class="form-control" placeholder="成员姓名">
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="form-control-static text-danger">名称不能为空</p>
@@ -73,14 +73,23 @@
                             <div class="form-group">
                                 <label class="col-sm-2 control-label">性别</label>
                                 <div class="col-sm-5">
-                                    <input type="text" name="place" class="form-control" placeholder="成员性别">
+                                    <input type="text" name="sex" class="form-control" placeholder="成员性别">
                                 </div>
                                 <div class="col-sm-5">
                                     <p class="form-control-static text-danger">性别不能为空</p>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="col-sm-2 control-label">类别</label>
+                                <label class="col-sm-2 control-label">年龄</label>
+                                <div class="col-sm-5">
+                                    <input type="text" name="age" class="form-control" placeholder="成员年龄">
+                                </div>
+                                <div class="col-sm-5">
+                                    <p class="form-control-static text-danger">年龄不能为空</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-2 control-label">辈分</label>
                                 <div class="col-sm-5">
                                     <label class="radio-inline">
                                         <input type="radio" name="type" value="0">长辈
@@ -93,7 +102,7 @@
                                     </label>
                                 </div>
                                 <div class="col-sm-5">
-                                    <p class="form-control-static text-danger">请选择分类</p>
+                                    <p class="form-control-static text-danger">请选择辈分</p>
                                 </div>
                             </div>
                             <div class="form-group">

@@ -34,7 +34,7 @@
         <div class="web_login" id="web_login">
             <div class="login-box">
                 <div class="login_form">
-                    <form action="login"
+                    <form action="user"
                           accept-charset="utf-8" id="login_form" class="loginForm"
                           method="post">
                         <input type="hidden" name="method" value="login"/>
@@ -73,7 +73,8 @@
     <div class="qlogin" id="qlogin" style="display: none;">
         <div class="web_login">
             <form name="form2" id="regUser" accept-charset="utf-8"
-                  action="register" method="post">
+                  action="user" method="post">
+                <input type="hidden" name="method" value="register">
                 <input type="hidden" name="to" value="reg"/> <input type="hidden"
                                                                     name="did" value="0"/>
                 <ul class="reg_form" id="reg-ul">

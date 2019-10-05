@@ -3,7 +3,7 @@ package service;
 import bean.Page;
 import dao.MemberDao;
 
-import java.lang.reflect.Member;
+import bean.Member;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -39,8 +39,40 @@ public class MemberService {
     page.setCurrentPage(currentPage);
     page.setTotalPage(totalPage);
     page.setTotalCount(totalCount);
+
     System.out.println("service：page属性封装完毕");
+    System.out.println("startPosition:"+startPosition);
+    System.out.println("pageSize"+pageSize);
+    System.out.println("currentPage"+currentPage);
+    System.out.println("totalPage"+totalPage);
+    System.out.println("totalCount"+totalCount);
+    System.out.println("page.getList()"+page.getList());
+    System.out.println("page.getList().size()"+page.getList().size());
 
     return page;
+  }
+
+    public boolean addMember(Member member) throws SQLException {
+      MemberDao memberDao=new MemberDao();
+      boolean isAddMember=memberDao.addMember(member);
+      return isAddMember;
+    }
+
+  public List<Member> findMember() throws SQLException {
+    MemberDao memberDao=new MemberDao();
+    List<Member> memberList=memberDao.queryMemberList();
+    return memberList;
+  }
+
+  public boolean updateMember(Member member) throws SQLException {
+    MemberDao memberDao=new MemberDao();
+    boolean isUpdate=memberDao.updateMember(member);
+    return isUpdate;
+  }
+
+  public boolean deleteMember(Member member) throws SQLException {
+    MemberDao memberDao=new MemberDao();
+    boolean isDelete=memberDao.deleteMember(member);
+    return isDelete;
   }
 }

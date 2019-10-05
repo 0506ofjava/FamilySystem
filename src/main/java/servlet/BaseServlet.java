@@ -14,6 +14,7 @@ import java.lang.reflect.Method;
  */
 @WebServlet(name = "BaseServlet")
 public class BaseServlet extends HttpServlet {
+
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");

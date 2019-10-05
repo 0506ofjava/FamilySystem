@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>家庭信息管理系统</title>
+	<title>成员信息展示</title>
 	<link rel="stylesheet" href="static/css/bootstrap.min.css">   
 	<style type="text/css">
 		body{ font-family: 'Microsoft YaHei';}
@@ -25,7 +25,7 @@
 			<!-- 左侧内容 -->
 			<div class="col-md-3">
 				<div class="list-group">
-					<a href="${pageContext.request.contextPath}/member-list.jsp" class="list-group-item text-center active">成员列表</a>
+					<a href="${pageContext.request.contextPath}/member?method=getMemberList&currentPage=1" class="list-group-item text-center active">成员列表</a>
 					<a href="${pageContext.request.contextPath}/member-add.jsp" class="list-group-item text-center ">新增成员</a>
 				</div>
 			</div>
@@ -51,7 +51,7 @@
 									<th>编号</th>
 									<th>姓名</th>
 									<th>年龄</th>
-									<th>类别</th>
+									<th>辈分</th>
 									<th>性别</th>
 									<th width="120">操作</th>
 								</tr>
@@ -89,51 +89,17 @@
 					</div>
 				</div>
 
-				<%--<nav>--%>
-					<%--<ul class="pagination pull-right">--%>
-					<%--<li  class="previous"><a href="#">&laquo;</a></li>--%>
-						<%--<c:forEach begin="1" end="${pageBean.totalPage}" var="page">--%>
-							<%--<li><a href="#">${page}</a></li>--%>
-							<%--<!-- 判断是否是当前页 -->--%>
-							<%--&lt;%&ndash;<c:if test="${page==pageBean.currentPage }">&ndash;%&gt;--%>
-								<%--&lt;%&ndash;<li class="active"><a href="javascript:void(0);">${page}</a></li>&ndash;%&gt;--%>
-							<%--&lt;%&ndash;</c:if>&ndash;%&gt;--%>
-							<%--&lt;%&ndash;<c:if test="${page!=pageBean.currentPage }">&ndash;%&gt;--%>
-								<%--&lt;%&ndash;<li><a href="${pageContext.request.contextPath}/productListByCid?cid=${cid}&currentPage=${page }">${page }</a></li>&ndash;%&gt;--%>
-							<%--&lt;%&ndash;</c:if>&ndash;%&gt;--%>
-						<%--</c:forEach>--%>
-
-						<%--<li><a href="#">&raquo;</a></li>--%>
-					<%--</ul>--%>
-
-				<%--</nav>--%>
-
-				<!--分页 -->
 				<nav>
 					<ul class="pagination pull-right">
 						<li  class="previous"><a href="#">&laquo;</a></li>
 						<c:forEach begin="1" end="${page.totalPage}" var="Page">
-							<li><a href="${pageContext.request.contextPath}/member?method=getMemberList&currentPage=${Page}&currentCount=10">${Page}</a></li>
+							<li><a href="${pageContext.request.contextPath}/member?method=getMemberList&currentPage=${Page}">${Page}</a></li>
 						</c:forEach>
 						<li><a href="#">&raquo;</a></li>
 					</ul>
 
 				</nav>
 
-
-
-
-
-
-
-				<!-- 分页结束 -->
-				<%--<ul class="pagination pull-right">--%>
-					<%--<li  class="previous"><a href="#">&laquo;</a></li>--%>
-					<%--<c:forEach begin="1" end="${pageBean.totalPage+1}" var="page">--%>
-						<%--<li><a href="${pageContext.request.contextPath}/category?method=getCategoryList&currentPage=${page}&currentCount=10">${page}</a></li>--%>
-					<%--</c:forEach>--%>
-					<%--<li><a href="#">&raquo;</a></li>--%>
-				<%--</ul>--%>
 			</div>
 		</div>
   	</div>
