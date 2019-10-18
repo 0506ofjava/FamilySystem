@@ -49,6 +49,7 @@
 					<div class="panel-heading">修改家庭成员信息</div>
 					<div class="panel-body">
 						<form action="member" method="post" class="form-horizontal" role="form">
+
 							<div class="form-group">
 								<label class="col-sm-2 control-label">名称</label>
 								<input hidden name="method" value="updateMember">
@@ -59,6 +60,7 @@
 									<p class="form-control-static text-danger">名称不能为空</p>
 								</div>
 							</div>
+
 							<div class="form-group">
 								<label class="col-sm-2 control-label">性别</label>
 								<div class="col-sm-5">
@@ -69,6 +71,7 @@
 									<p class="form-control-static text-danger">性别不能为空</p>
 								</div>
 							</div>
+
 							<div class="form-group">
 								<label class="col-sm-2 control-label">年龄</label>
 								<div class="col-sm-5">
@@ -78,6 +81,7 @@
 									<p class="form-control-static text-danger">年龄不能为空</p>
 								</div>
 							</div>
+
 							<div class="form-group">
 								<label class="col-sm-2 control-label">辈分</label>
 								<div class="col-sm-5">
@@ -91,10 +95,12 @@
 										<input <c:if test="${param.type==2}">checked="checked"</c:if> type="radio" name="type" value="2">晚辈
 									</label>
 								</div>
+
 								<div class="col-sm-5">
 									<p class="form-control-static text-danger">请选择辈分</p>
 								</div>
 							</div>
+
 							<div class="form-group">
 								<div class="col-sm-offset-2 col-sm-10">
 									<button type="submit" class="btn btn-primary">修改</button>

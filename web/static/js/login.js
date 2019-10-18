@@ -29,6 +29,7 @@ $(function() {
 		$('#switch_login').trigger('click');
 	}
 });
+
 function logintab(){
 	scrollTo(0);
 	$('#switch_qlogin').removeClass("switch_btn_focus").addClass('switch_btn');
@@ -37,6 +38,7 @@ function logintab(){
 	$('#qlogin').css('display','none');
 	$('#web_qr_login').css('display','block');
 }
+
 //根据参数名获得该参数 pname等于想要的参数名 
 function getParam(pname) { 
     var params = location.search.substr(1); // 获取参数 平且去掉？ 

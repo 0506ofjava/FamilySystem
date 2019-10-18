@@ -23,11 +23,11 @@
         <property name="jdbcUrl">jdbc:mysql://localhost:3306/myfirst_db</property>
         <property name="user">root</property><!--mysql的登陆名-->
         <property name="password">0506</property><!--如果没密码就可以设置成<property name="password"></property>-->
-        <property name="acquireIncrement">5</property><!-- 如果池中数据连接不够时一次增长多少个 -->
+        <property name="acquireIncrement">10</property><!-- 如果池中数据连接不够时一次增长多少个 -->
         <property name="initialPoolSize">10</property>
         <property name="minPoolSize">5</property>
-        <property name="maxPoolSize">15</property>
-        <property name="maxStatements">0</property>
+        <property name="maxPoolSize">256</property>
+        <property name="maxStatements">50</property>
         <property name="maxStatementsPerConnection">5</property> <!-- he's important, but there's only one of him -->
     </named-config>
 </c3p0-config>
